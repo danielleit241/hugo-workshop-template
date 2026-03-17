@@ -1,5 +1,5 @@
 ---
-title: "Đề xuất"
+title: "Proposal"
 date: "2025-09-09"
 weight: 1
 chapter: false
@@ -56,17 +56,16 @@ Kiến trúc Kỹ thuật (Workflow Overview)
 
 Technology Stack:
 
-| Lớp (Layer)               | Dịch vụ AWS                        | Mục đích / Vai trò                                                |
-| ---------------------     | ---------------------              | ---------------------------------------------------------------   |
-| Storage / Data Lake       | Amazon S3                          | Lưu trữ Raw Data và Curated/Processed Data.                       |
-| Event & Orchestration     | EventBridge, Step Functions        | Kích hoạt tự động, điều phối quy trình (State Machine).           |
-| Compute / Logic           | AWS Lambda                         | Xử lý logic điều hướng (Orchestration & Validation logic).        |
-| Data Processing (ETL)     | AWS Glue DataBrew                  | Profiling dữ liệu, làm sạch, biến đổi (No-code ETL).              |
-| Data Warehouse            | Amazon Redshift                    | Kho dữ liệu tập trung (OLAP), lưu trữ bảng Fact/Dimension.        |
-| Ad-hoc Query              | Amazon Athena                      | Truy vấn SQL trực tiếp không cần load vào Warehouse.              |
-| BI / Visualization        | Amazon QuickSight                  | Xây dựng Dashboard báo cáo quản trị.                              |
-| Security & Monitoring     | IAM, CloudTrail, CloudWatch, SNS   | Phân quyền, lưu vết, giám sát pipeline và gửi cảnh báo (Alert).   |
-
+| Lớp (Layer)           | Dịch vụ AWS                      | Mục đích / Vai trò                                              |
+| --------------------- | -------------------------------- | --------------------------------------------------------------- |
+| Storage / Data Lake   | Amazon S3                        | Lưu trữ Raw Data và Curated/Processed Data.                     |
+| Event & Orchestration | EventBridge, Step Functions      | Kích hoạt tự động, điều phối quy trình (State Machine).         |
+| Compute / Logic       | AWS Lambda                       | Xử lý logic điều hướng (Orchestration & Validation logic).      |
+| Data Processing (ETL) | AWS Glue DataBrew                | Profiling dữ liệu, làm sạch, biến đổi (No-code ETL).            |
+| Data Warehouse        | Amazon Redshift                  | Kho dữ liệu tập trung (OLAP), lưu trữ bảng Fact/Dimension.      |
+| Ad-hoc Query          | Amazon Athena                    | Truy vấn SQL trực tiếp không cần load vào Warehouse.            |
+| BI / Visualization    | Amazon QuickSight                | Xây dựng Dashboard báo cáo quản trị.                            |
+| Security & Monitoring | IAM, CloudTrail, CloudWatch, SNS | Phân quyền, lưu vết, giám sát pipeline và gửi cảnh báo (Alert). |
 
 **Kế hoạch triển khai (Implementation Plan)**
 
