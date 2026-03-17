@@ -1,4 +1,4 @@
-baseURL = "https://example.com/"
+baseURL = "https://github.com/danielleit241"
 relativeURLs = true
 canonifyURLs = true
 
@@ -10,7 +10,7 @@ home = [ "HTML", "RSS", "JSON"]
 [params]
   themeVariant = "workshop"
   editURL = ""
-  description = "Hugo Workshop Template - Tái sử dụng cho workshop/docs"
+  description = "AWS Workshop"
   author = ""
   showVisitedLinks = true
   disableBreadcrumb = false
