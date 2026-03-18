@@ -12,83 +12,312 @@ chapter: false
 
 ## 👥 Team Members
 
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 20px;">
+<style>
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+  justify-items: center;
+  padding: 20px;
+}
 
-<!-- Member 1 -->
-<div style="border: 2px solid #e74c3c; border-radius: 12px; padding: 20px; text-align: center; box-shadow: 0 4px 12px rgba(231, 76, 60, 0.15); transition: transform 0.3s; background: linear-gradient(135deg, rgba(231, 76, 60, 0.05) 0%, rgba(255, 255, 255, 0) 100%);">
-  <img src="/images/Team/SE180011.JPG" alt="Triệu Quốc Hào" style="width: 160px; height: 160px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; border: 3px solid #e74c3c;">
-  <h3 style="margin: 10px 0; color: #2c3e50;">Triệu Quốc Hào</h3>
-  <p style="margin: 5px 0; color: #e74c3c; font-weight: bold; font-size: 16px;">👑 Leader - Data Scientist</p>
-  <hr style="border: none; border-top: 1px solid #ecf0f1; margin: 10px 0;">
-  <p style="margin: 5px 0; font-size: 13px;">Email: haotqse180011@fpt.edu.vn</p>
-  <p style="margin: 5px 0; font-size: 13px;">Phone: 078-491-9197</p>
-  <p style="margin: 5px 0; font-size: 13px;">ID: SE180011</p>
+.team-card {
+  position: relative;
+  width: 340px;
+  background: linear-gradient(145deg, rgba(255,255,255,0.95) 0%, rgba(248,250,252,0.9) 100%);
+  border-radius: 20px;
+  padding: 30px 25px;
+  text-align: center;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.team-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--card-color);
+  transition: height 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.team-card:hover::before {
+  height: 6px;
+}
+
+.team-avatar-container {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  margin: 0 auto 20px;
+}
+
+.team-avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--card-color);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.team-card:hover .team-avatar {
+  transform: scale(1.05);
+}
+
+.team-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1a202e;
+  margin: 15px 0 8px;
+  letter-spacing: -0.5px;
+}
+
+.team-role {
+  display: inline-block;
+  padding: 6px 16px;
+  background: var(--card-color);
+  color: white;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 18px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.team-divider {
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--card-color), transparent);
+  margin: 15px auto;
+  border-radius: 2px;
+}
+
+.team-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 15px;
+}
+
+.team-info-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: #64748b;
+  padding: 8px 12px;
+  background: rgba(241,245,249,0.6);
+  border-radius: 10px;
+  transition: background 0.3s ease;
+}
+
+.team-info-item:hover {
+  background: rgba(241,245,249,0.9);
+}
+
+.team-info-icon {
+  font-size: 1rem;
+}
+
+/* Role-specific colors */
+.team-card.leader { --card-color: #e74c3c; }
+.team-card.data-engineer { --card-color: #f39c12; }
+.team-card.ai-engineer { --card-color: #3498db; }
+.team-card.backend-engineer { --card-color: #27ae60; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+    padding: 10px;
+  }
+  .team-card {
+    width: 100%;
+    max-width: 340px;
+  }
+}
+</style>
+
+<div class="team-grid">
+
+<!-- Member 1 - Leader -->
+<div class="team-card leader">
+  <div class="team-avatar-container">
+    <img src="/images/Team/SE180011.JPG" alt="Triệu Quốc Hào" class="team-avatar">
+  </div>
+  <h3 class="team-name">Triệu Quốc Hào</h3>
+  <span class="team-role">👑 Leader - Data Scientist</span>
+  <div class="team-divider"></div>
+  <div class="team-info">
+    <div class="team-info-item">
+      <span class="team-info-icon">Email:</span>
+      <span>haotqse180011@fpt.edu.vn</span>
+    </div>
+    <div class="team-info-item">
+      <span class="team-info-icon">Phone:</span>
+      <span>078-491-9197</span>
+    </div>
+    <div class="team-info-item">
+      <span class="team-info-icon">ID:</span>
+      <span>SE180011</span>
+    </div>
+  </div>
 </div>
 
-<!-- Member 2 -->
-<div style="border: 2px solid #f39c12; border-radius: 12px; padding: 20px; text-align: center; box-shadow: 0 4px 12px rgba(243, 156, 18, 0.15); transition: transform 0.3s; background: linear-gradient(135deg, rgba(243, 156, 18, 0.05) 0%, rgba(255, 255, 255, 0) 100%);">
-  <img src="/images/Team/SE194447.JPG" alt="Nguyễn Quách Lam Giang" style="width: 160px; height: 160px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; border: 3px solid #f39c12;">
-  <h3 style="margin: 10px 0; color: #2c3e50;">Nguyễn Quách Lam Giang</h3>
-  <p style="margin: 5px 0; color: #f39c12; font-weight: bold; font-size: 16px;">📊 Data Engineer</p>
-  <hr style="border: none; border-top: 1px solid #ecf0f1; margin: 10px 0;">
-  <p style="margin: 5px 0; font-size: 13px;">Email: nguyenlamgiang2198@gmail.com</p>
-  <p style="margin: 5px 0; font-size: 13px;">Phone: 089-9197-017</p>
-  <p style="margin: 5px 0; font-size: 13px;">ID: SE194447</p>
+<!-- Member 2 - Data Engineer -->
+<div class="team-card data-engineer">
+  <div class="team-avatar-container">
+    <img src="/images/Team/SE194447.JPG" alt="Nguyễn Quách Lam Giang" class="team-avatar">
+  </div>
+  <h3 class="team-name">Nguyễn Quách Lam Giang</h3>
+  <span class="team-role">📊 Data Engineer</span>
+  <div class="team-divider"></div>
+  <div class="team-info">
+    <div class="team-info-item">
+      <span class="team-info-icon">Email:</span>
+      <span>nguyenlamgiang2198@gmail.com</span>
+    </div>
+    <div class="team-info-item">
+      <span class="team-info-icon">Phone:</span>
+      <span>089-9197-017</span>
+    </div>
+    <div class="team-info-item">
+      <span class="team-info-icon">ID:</span>
+      <span>SE194447</span>
+    </div>
+  </div>
 </div>
 
-<!-- Member 3 -->
-<div style="border: 2px solid #3498db; border-radius: 12px; padding: 20px; text-align: center; box-shadow: 0 4px 12px rgba(52, 152, 219, 0.15); transition: transform 0.3s; background: linear-gradient(135deg, rgba(52, 152, 219, 0.05) 0%, rgba(255, 255, 255, 0) 100%);">
-  <img src="/images/Team/SE181823.JPG" alt="Nguyễn Văn Anh Duy" style="width: 160px; height: 160px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; border: 3px solid #3498db;">
-  <h3 style="margin: 10px 0; color: #2c3e50;">Nguyễn Văn Anh Duy</h3>
-  <p style="margin: 5px 0; color: #3498db; font-weight: bold; font-size: 16px;">🤖 AI Engineer</p>
-  <hr style="border: none; border-top: 1px solid #ecf0f1; margin: 10px 0;">
-  <p style="margin: 5px 0; font-size: 13px;">Email: duynguyenvananh@gmail.com</p>
-  <p style="margin: 5px 0; font-size: 13px;">Phone: 038-788-3041</p>
-  <p style="margin: 5px 0; font-size: 13px;">ID: SE181823</p>
+<!-- Member 3 - AI Engineer -->
+<div class="team-card ai-engineer">
+  <div class="team-avatar-container">
+    <img src="/images/Team/SE181823.JPG" alt="Nguyễn Văn Anh Duy" class="team-avatar">
+  </div>
+  <h3 class="team-name">Nguyễn Văn Anh Duy</h3>
+  <span class="team-role">🤖 AI Engineer</span>
+  <div class="team-divider"></div>
+  <div class="team-info">
+    <div class="team-info-item">
+      <span class="team-info-icon">Email:</span>
+      <span>duynguyenvananh@gmail.com</span>
+    </div>
+    <div class="team-info-item">
+      <span class="team-info-icon">Phone:</span>
+      <span>038-788-3041</span>
+    </div>
+    <div class="team-info-item">
+      <span class="team-info-icon">ID:</span>
+      <span>SE181823</span>
+    </div>
+  </div>
 </div>
 
-<!-- Member 4 -->
-<div style="border: 2px solid #3498db; border-radius: 12px; padding: 20px; text-align: center; box-shadow: 0 4px 12px rgba(52, 152, 219, 0.15); transition: transform 0.3s; background: linear-gradient(135deg, rgba(52, 152, 219, 0.05) 0%, rgba(255, 255, 255, 0) 100%);">
-  <img src="/images/Team/SE193028.JPG" alt="Trần Huỳnh Bảo Minh" style="width: 160px; height: 160px; border-radius: 50%; object-fit: cover; object-position: center top; margin-bottom: 15px; border: 3px solid #3498db;">
-  <h3 style="margin: 10px 0; color: #2c3e50;">Trần Huỳnh Bảo Minh</h3>
-  <p style="margin: 5px 0; color: #3498db; font-weight: bold; font-size: 16px;">🤖 AI Engineer</p>
-  <hr style="border: none; border-top: 1px solid #ecf0f1; margin: 10px 0;">
-  <p style="margin: 5px 0; font-size: 13px;">Email: baominhbrthcs@gmail.com</p>
-  <p style="margin: 5px 0; font-size: 13px;">Phone: 078-222-4999</p>
-  <p style="margin: 5px 0; font-size: 13px;">ID: SE193028</p>
+<!-- Member 4 - AI Engineer -->
+<div class="team-card ai-engineer">
+  <div class="team-avatar-container">
+    <img src="/images/Team/SE193028.JPG" alt="Trần Huỳnh Bảo Minh" class="team-avatar" style="object-position: center top;">
+  </div>
+  <h3 class="team-name">Trần Huỳnh Bảo Minh</h3>
+  <span class="team-role">🤖 AI Engineer</span>
+  <div class="team-divider"></div>
+  <div class="team-info">
+    <div class="team-info-item">
+      <span class="team-info-icon">Email:</span>
+      <span>baominhbrthcs@gmail.com</span>
+    </div>
+    <div class="team-info-item">
+      <span class="team-info-icon">Phone:</span>
+      <span>078-222-4999</span>
+    </div>
+    <div class="team-info-item">
+      <span class="team-info-icon">ID:</span>
+      <span>SE193028</span>
+    </div>
+  </div>
 </div>
 
-<!-- Member 5 -->
-<div style="border: 2px solid #27ae60; border-radius: 12px; padding: 20px; text-align: center; box-shadow: 0 4px 12px rgba(39, 174, 96, 0.15); transition: transform 0.3s; background: linear-gradient(135deg, rgba(39, 174, 96, 0.05) 0%, rgba(255, 255, 255, 0) 100%);">
-  <img src="/images/Team/SE181951.JPG" alt="Lê Vũ Phương Hoà" style="width: 160px; height: 160px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; border: 3px solid #27ae60;">
-  <h3 style="margin: 10px 0; color: #2c3e50;">Lê Vũ Phương Hoà</h3>
-  <p style="margin: 5px 0; color: #27ae60; font-weight: bold; font-size: 16px;">⚙️ Backend Engineer</p>
-  <hr style="border: none; border-top: 1px solid #ecf0f1; margin: 10px 0;">
-  <p style="margin: 5px 0; font-size: 13px;">Email: hoalvpse181951@fpt.edu.vn</p>
-  <p style="margin: 5px 0; font-size: 13px;">Phone: 032-703-0024</p>
-  <p style="margin: 5px 0; font-size: 13px;">ID: SE181951</p>
+<!-- Member 5 - Backend Engineer -->
+<div class="team-card backend-engineer">
+  <div class="team-avatar-container">
+    <img src="/images/Team/SE181951.JPG" alt="Lê Vũ Phương Hoà" class="team-avatar">
+  </div>
+  <h3 class="team-name">Lê Vũ Phương Hoà</h3>
+  <span class="team-role">⚙️ Backend Engineer</span>
+  <div class="team-divider"></div>
+  <div class="team-info">
+    <div class="team-info-item">
+      <span class="team-info-icon">Email:</span>
+      <span>hoalvpse181951@fpt.edu.vn</span>
+    </div>
+    <div class="team-info-item">
+      <span class="team-info-icon">Phone:</span>
+      <span>032-703-0024</span>
+    </div>
+    <div class="team-info-item">
+      <span class="team-info-icon">ID:</span>
+      <span>SE181951</span>
+    </div>
+  </div>
 </div>
 
-<!-- Member 6 -->
-<div style="border: 2px solid #27ae60; border-radius: 12px; padding: 20px; text-align: center; box-shadow: 0 4px 12px rgba(39, 174, 96, 0.15); transition: transform 0.3s; background: linear-gradient(135deg, rgba(39, 174, 96, 0.05) 0%, rgba(255, 255, 255, 0) 100%);">
-  <img src="/images/Team/SE182968.JPG" alt="Nguyễn Công Minh" style="width: 160px; height: 160px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; border: 3px solid #27ae60;">
-  <h3 style="margin: 10px 0; color: #2c3e50;">Nguyễn Công Minh</h3>
-  <p style="margin: 5px 0; color: #27ae60; font-weight: bold; font-size: 16px;">⚙️ Backend Engineer</p>
-  <hr style="border: none; border-top: 1px solid #ecf0f1; margin: 10px 0;">
-  <p style="margin: 5px 0; font-size: 13px;">Email: minhncse182968@fpt.edu.vn</p>
-  <p style="margin: 5px 0; font-size: 13px;">Phone: 036-240-1520</p>
-  <p style="margin: 5px 0; font-size: 13px;">ID: SE182968</p>
+<!-- Member 6 - Backend Engineer -->
+<div class="team-card backend-engineer">
+  <div class="team-avatar-container">
+    <img src="/images/Team/SE182968.JPG" alt="Nguyễn Công Minh" class="team-avatar">
+  </div>
+  <h3 class="team-name">Nguyễn Công Minh</h3>
+  <span class="team-role">⚙️ Backend Engineer</span>
+  <div class="team-divider"></div>
+  <div class="team-info">
+    <div class="team-info-item">
+      <span class="team-info-icon">Email:</span>
+      <span>minhncse182968@fpt.edu.vn</span>
+    </div>
+    <div class="team-info-item">
+      <span class="team-info-icon">Phone:</span>
+      <span>036-240-1520</span>
+    </div>
+    <div class="team-info-item">
+      <span class="team-info-icon">ID:</span>
+      <span>SE182968</span>
+    </div>
+  </div>
 </div>
 
-<!-- Member 7 -->
-<div style="border: 2px solid #27ae60; border-radius: 12px; padding: 20px; text-align: center; box-shadow: 0 4px 12px rgba(39, 174, 96, 0.15); transition: transform 0.3s; background: linear-gradient(135deg, rgba(39, 174, 96, 0.05) 0%, rgba(255, 255, 255, 0) 100%);">
-  <img src="/images/Team/SE180168.png" alt="Nguyễn Văn Duy Khiêm" style="width: 160px; height: 160px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; border: 3px solid #27ae60;">
-  <h3 style="margin: 10px 0; color: #2c3e50;">Nguyễn Văn Duy Khiêm</h3>
-  <p style="margin: 5px 0; color: #27ae60; font-weight: bold; font-size: 16px;">⚙️ Backend Engineer</p>
-  <hr style="border: none; border-top: 1px solid #ecf0f1; margin: 10px 0;">
-  <p style="margin: 5px 0; font-size: 13px;">Email: khiemnguyen120216@gmail.com</p>
-  <p style="margin: 5px 0; font-size: 13px;">Phone: 083-6262-507</p>
-  <p style="margin: 5px 0; font-size: 13px;">ID: SE180168</p>
+<!-- Member 7 - Backend Engineer -->
+<div class="team-card backend-engineer">
+  <div class="team-avatar-container">
+    <img src="/images/Team/SE180168.png" alt="Nguyễn Văn Duy Khiêm" class="team-avatar">
+  </div>
+  <h3 class="team-name">Nguyễn Văn Duy Khiêm</h3>
+  <span class="team-role">⚙️ Backend Engineer</span>
+  <div class="team-divider"></div>
+  <div class="team-info">
+    <div class="team-info-item">
+      <span class="team-info-icon">Email:</span>
+      <span>khiemnguyen120216@gmail.com</span>
+    </div>
+    <div class="team-info-item">
+      <span class="team-info-icon">Phone:</span>
+      <span>083-6262-507</span>
+    </div>
+    <div class="team-info-item">
+      <span class="team-info-icon">ID:</span>
+      <span>SE180168</span>
+    </div>
+  </div>
 </div>
 
 </div>
