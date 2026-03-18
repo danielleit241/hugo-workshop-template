@@ -6,9 +6,9 @@ chapter: false
 pre: " <b> 1. </b> "
 ---
 
-## Nội dung
+## **Nội dung**
 
-**Tóm tắt dự án (Executive Summary)**
+### **Tóm tắt dự án (Executive Summary)**
 
 - Tóm tắt: Dự án này nhằm xây dựng một hệ thống xử lý dữ liệu tự động (Data Analytics Pipeline) trên nền tảng đám mây Amazon Web Services (AWS). Hệ thống được thiết kế theo kiến trúc Event-Driven và Serverless, chuyên biệt để xử lý, làm sạch và phân tích tập dữ liệu lớn về hồ sơ chuyến đi của taxi (TLC Trip Record Data - Yellow Taxi). Mục đích cuối cùng là chuyển đổi dữ liệu thô thành các thông tin chi tiết (insights) có giá trị cao, phục vụ cho việc ra quyết định kinh doanh thông qua các Dashboard trực quan.
 - Mục tiêu:
@@ -23,7 +23,7 @@ pre: " <b> 1. </b> "
   - Xây dựng hệ thống báo cáo BI (Business Intelligence) trên Amazon QuickSight.
   - Thiết lập hệ thống bảo mật, giám sát và cảnh báo lỗi (CloudWatch, CloudTrail, SNS).
 
-**Tuyên bố vấn đề (Problem Statement)**
+### **Tuyên bố vấn đề (Problem Statement)**
 
 Vấn đề hiện tại (Current Challenges): Tập dữ liệu Yellow Taxi từ New York City Taxi and Limousine Commission chứa lượng thông tin khổng lồ nhưng mang nhiều "nhiễu" và bất thường ở dạng thô:
 
@@ -37,14 +37,14 @@ Giải pháp kỹ thuật (Technical Solution): Triển khai kiến trúc Modern
 - Kiểm soát chất lượng chặt chẽ: Sử dụng AWS Glue DataBrew để Profiling (phân tích cấu trúc) và AWS Lambda để rẽ nhánh logic (Ví dụ: Tự động cảnh báo nếu tỷ lệ lỗi dữ liệu > 20%, ngược lại tiếp tục quy trình).
 - Chuẩn hóa và Tối ưu: Làm sạch dữ liệu, tạo thêm các biến có ý nghĩa (Feature Engineering như `trip_duration`, `trip_speed`) và lưu trữ dưới định dạng Columnar (Parquet) theo phân vùng (Partitioning) để tối ưu chi phí và tốc độ truy vấn.
 
-**Kiến trúc giải pháp (Solution Architecture)**
+### **Kiến trúc giải pháp (Solution Architecture)**
 
 ![overview](/images/Proposal/diagram-architecture.jpg)
 
 Kiến trúc hệ thống đi theo luồng xử lý:
 Raw &rarr; Processing &rarr; Analytics &rarr; Visualization.
 
-Kiến trúc Kỹ thuật (Workflow Overview)
+**Kiến trúc Kỹ thuật (Workflow Overview):**
 
 - Ingestion: Dữ liệu thô (Parquet/CSV) được đẩy vào Data Lake S3 Raw Bucket.
 - Trigger: Sự kiện `ObjectCreated` từ S3 kích hoạt EventBridge.
@@ -56,7 +56,7 @@ Kiến trúc Kỹ thuật (Workflow Overview)
 - Data Warehousing: Sử dụng lệnh `COPY` để nạp dữ liệu từ S3 vào bảng `fact_taxi_trip` trong Amazon Redshift phục vụ OLAP. Song song, Amazon Athena hỗ trợ truy vấn Ad-hoc trực tiếp trên S3.
 - Visualization: Amazon QuickSight kết nối với Redshift/Athena để hiển thị Dashboard (Trip Demand, Revenue, Spatial Analysis).
 
-Technology Stack:
+**Technology Stack:**
 
 | Lớp (Layer)           | Dịch vụ AWS                      | Mục đích / Vai trò                                              |
 | --------------------- | -------------------------------- | --------------------------------------------------------------- |
@@ -69,29 +69,29 @@ Technology Stack:
 | BI / Visualization    | Amazon QuickSight                | Xây dựng Dashboard báo cáo quản trị.                            |
 | Security & Monitoring | IAM, CloudTrail, CloudWatch, SNS | Phân quyền, lưu vết, giám sát pipeline và gửi cảnh báo (Alert). |
 
-**Kế hoạch triển khai (Implementation Plan)**
+### **Kế hoạch triển khai (Implementation Plan)**
 
-Lộ trình và Milestones (Dự kiến 8 tuần)
+Lộ trình và Milestones (Dự kiến 4 tuần)
 
-- Phase 1: Foundation & Data Ingestion (Tuần 1-2)
+- Phase 1: Foundation & Data Ingestion (Tuần 1)
   - Thiết lập môi trường AWS, cấu hình IAM Roles và Security.
   - Tạo S3 Buckets (Raw & Processed).
   - Thiết lập EventBridge trigger S3 `ObjectCreated`.
-- Phase 2: Orchestration & Data Processing (Tuần 3-5)
+- Phase 2: Orchestration & Data Processing (Tuần 2)
   - Tạo Glue DataBrew Profiles để phân tích cấu trúc schema của Taxi data.
   - Viết DataBrew Recipes thực hiện ETL (Xóa null, lọc giá trị âm, tạo biến `trip_duration`, `trip_speed`).
   - Lập trình AWS Lambda function để đọc rules và rẽ nhánh.
   - Đóng gói quy trình vào AWS Step Functions.
-- Phase 3: Data Warehousing & Querying (Tuần 6)
+- Phase 3: Data Warehousing & Querying (Tuần 3)
   - Thiết lập Amazon Redshift Cluster, tạo schema `fact_taxi_trip`.
   - Tạo luồng tự động `COPY` dữ liệu từ S3 Processed vào Redshift.
   - Cấu hình Amazon Athena trỏ vào S3 Processed bucket.
-- Phase 4: BI Visualization & Handover (Tuần 7-8)
+- Phase 4: BI Visualization & Handover (Tuần 4)
   - Phát triển QuickSight Dashboards (Trip Demand, Revenue per Vendor, Heatmaps).
   - Thiết lập CloudWatch Alarms & SNS (cảnh báo qua Email/Slack khi ETL failed).
   - Kiểm thử toàn trình (UAT) và bàn giao tài liệu hệ thống.
 
-**Ước lượng chi phí (Cost Estimation Model)** 
+### **Ước lượng chi phí (Cost Estimation Model)** 
 
 Hệ thống tận dụng tối đa kiến trúc Serverless, chi phí sẽ tính theo dạng Pay-as-you-go (Dùng bao nhiêu trả bấy nhiêu). Để tối ưu
 chi phí, chúng tôi sẽ để region ở `us-east-2` và **Redshift** sẽ được dùng trong 1 tiếng.

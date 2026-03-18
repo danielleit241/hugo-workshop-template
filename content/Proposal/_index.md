@@ -8,7 +8,7 @@ pre: " <b> 1. </b> "
 
 ## Content
 
-**Project Summary (Executive Summary)**
+### **Project Summary**
 
 - Summary: This project aims to build an automated data processing system (Data Analytics Pipeline) on the Amazon Web Services (AWS) cloud platform. The system is designed with an event-driven and serverless architecture, specialized for processing, cleaning, and analyzing large-scale taxi trip record datasets (TLC Trip Record Data - Yellow Taxi). The ultimate goal is to transform raw data into high-value insights that support business decision-making through interactive dashboards.
 - Objectives:
@@ -23,7 +23,7 @@ pre: " <b> 1. </b> "
   - Build a BI reporting system on Amazon QuickSight.
   - Set up security, monitoring, and alerting systems using CloudWatch, CloudTrail, and SNS.
 
-**Problem Statement**
+### **Problem Statement**
 
 Current Challenges: The Yellow Taxi dataset from the New York City Taxi and Limousine Commission contains a massive amount of information, but the raw data also includes a significant amount of noise and anomalies:
 
@@ -37,7 +37,7 @@ Technical Solution: Deploy a modern Data Lakehouse architecture on AWS:
 - Strict quality control: Use AWS Glue DataBrew for profiling and AWS Lambda for branching logic. For example, automatically send an alert if the data error rate is greater than 20%; otherwise continue the pipeline.
 - Standardization and optimization: Clean the data, create additional meaningful features such as `trip_duration` and `trip_speed`, and store it in columnar Parquet format with partitioning to optimize cost and query performance.
 
-**Solution Architecture**
+### **Solution Architecture**
 
 ![overview](/images/Proposal/diagram-architecture.jpg)
 
@@ -70,29 +70,29 @@ Technology Stack:
 | Security & Monitoring     | IAM, CloudTrail, CloudWatch, SNS   | Handles access control, audit logs, monitoring, and alerts.       |
 
 
-**Implementation Plan**
+### **Implementation Plan**
 
-Roadmap and Milestones (Estimated 8 weeks)
+Roadmap and Milestones (Estimated 4 weeks)
 
-- Phase 1: Foundation & Data Ingestion (Weeks 1-2)
+- Phase 1: Foundation & Data Ingestion (Weeks 1)
   - Set up the AWS environment and configure IAM roles and security.
   - Create S3 buckets for raw and processed data.
   - Configure an EventBridge trigger for S3 `ObjectCreated` events.
-- Phase 2: Orchestration & Data Processing (Weeks 3-5)
+- Phase 2: Orchestration & Data Processing (Weeks 2)
   - Create Glue DataBrew profiles to analyze the schema structure of the taxi data.
   - Write DataBrew recipes for ETL tasks such as removing nulls, filtering negative values, and creating `trip_duration` and `trip_speed` features.
   - Develop AWS Lambda functions to read rules and handle branching logic.
   - Package the workflow into AWS Step Functions.
-- Phase 3: Data Warehousing & Querying (Week 6)
+- Phase 3: Data Warehousing & Querying (Week 3)
   - Set up an Amazon Redshift cluster and create the `fact_taxi_trip` schema.
   - Build an automated flow to `COPY` processed data from S3 into Redshift.
   - Configure Amazon Athena to point to the S3 Processed bucket.
-- Phase 4: BI Visualization & Handover (Weeks 7-8)
+- Phase 4: BI Visualization & Handover (Weeks 4)
   - Develop QuickSight dashboards for Trip Demand, Revenue per Vendor, and Heatmaps.
   - Set up CloudWatch alarms and SNS notifications to alert via email or Slack when ETL fails.
   - Perform end-to-end UAT testing and hand over the system documentation.
 
-**Cost Estimation Model**
+### **Cost Estimation Model**
 
 The system maximizes the use of serverless architecture, so costs follow a pay-as-you-go model. To optimze the cost,
 we will put region in `us-east-2` and **Redshift** will only used in 1 hour.

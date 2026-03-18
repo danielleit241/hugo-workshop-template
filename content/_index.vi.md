@@ -75,24 +75,6 @@ chapter: false
   transform: scale(1.05);
 }
 
-.team-avatar-glow {
-  position: absolute;
-  top: -5px;
-  left: -5px;
-  right: -5px;
-  bottom: -5px;
-  border-radius: 50%;
-  background: var(--card-color);
-  opacity: 0.2;
-  filter: blur(15px);
-  animation: pulse 2s ease-in-out infinite;
-}
-
-@keyframes pulse {
-  0%, 100% { opacity: 0.2; transform: scale(1); }
-  50% { opacity: 0.3; transform: scale(1.05); }
-}
-
 .team-name {
   font-size: 1.25rem;
   font-weight: 700;
@@ -173,7 +155,6 @@ chapter: false
 <!-- Member 1 - Leader -->
 <div class="team-card leader">
   <div class="team-avatar-container">
-    <div class="team-avatar-glow"></div>
     <img src="/images/Team/SE180011.JPG" alt="Triệu Quốc Hào" class="team-avatar">
   </div>
   <h3 class="team-name">Triệu Quốc Hào</h3>
@@ -181,15 +162,15 @@ chapter: false
   <div class="team-divider"></div>
   <div class="team-info">
     <div class="team-info-item">
-      <span class="team-info-icon">📧</span>
+      <span class="team-info-icon">Email:</span>
       <span>haotqse180011@fpt.edu.vn</span>
     </div>
     <div class="team-info-item">
-      <span class="team-info-icon">📱</span>
+      <span class="team-info-icon">Phone:</span>
       <span>078-491-9197</span>
     </div>
     <div class="team-info-item">
-      <span class="team-info-icon">🆔</span>
+      <span class="team-info-icon">ID:</span>
       <span>SE180011</span>
     </div>
   </div>
@@ -198,7 +179,6 @@ chapter: false
 <!-- Member 2 - Data Engineer -->
 <div class="team-card data-engineer">
   <div class="team-avatar-container">
-    <div class="team-avatar-glow"></div>
     <img src="/images/Team/SE194447.JPG" alt="Nguyễn Quách Lam Giang" class="team-avatar">
   </div>
   <h3 class="team-name">Nguyễn Quách Lam Giang</h3>
@@ -206,15 +186,15 @@ chapter: false
   <div class="team-divider"></div>
   <div class="team-info">
     <div class="team-info-item">
-      <span class="team-info-icon">📧</span>
+      <span class="team-info-icon">Email:</span>
       <span>nguyenlamgiang2198@gmail.com</span>
     </div>
     <div class="team-info-item">
-      <span class="team-info-icon">📱</span>
+      <span class="team-info-icon">Phone:</span>
       <span>089-9197-017</span>
     </div>
     <div class="team-info-item">
-      <span class="team-info-icon">🆔</span>
+      <span class="team-info-icon">ID:</span>
       <span>SE194447</span>
     </div>
   </div>
@@ -223,7 +203,6 @@ chapter: false
 <!-- Member 3 - AI Engineer -->
 <div class="team-card ai-engineer">
   <div class="team-avatar-container">
-    <div class="team-avatar-glow"></div>
     <img src="/images/Team/SE181823.JPG" alt="Nguyễn Văn Anh Duy" class="team-avatar">
   </div>
   <h3 class="team-name">Nguyễn Văn Anh Duy</h3>
@@ -231,15 +210,15 @@ chapter: false
   <div class="team-divider"></div>
   <div class="team-info">
     <div class="team-info-item">
-      <span class="team-info-icon">📧</span>
+      <span class="team-info-icon">Email:</span>
       <span>duynguyenvananh@gmail.com</span>
     </div>
     <div class="team-info-item">
-      <span class="team-info-icon">📱</span>
+      <span class="team-info-icon">Phone:</span>
       <span>038-788-3041</span>
     </div>
     <div class="team-info-item">
-      <span class="team-info-icon">🆔</span>
+      <span class="team-info-icon">ID:</span>
       <span>SE181823</span>
     </div>
   </div>
@@ -248,7 +227,6 @@ chapter: false
 <!-- Member 4 - AI Engineer -->
 <div class="team-card ai-engineer">
   <div class="team-avatar-container">
-    <div class="team-avatar-glow"></div>
     <img src="/images/Team/SE193028.JPG" alt="Trần Huỳnh Bảo Minh" class="team-avatar" style="object-position: center top;">
   </div>
   <h3 class="team-name">Trần Huỳnh Bảo Minh</h3>
@@ -256,15 +234,15 @@ chapter: false
   <div class="team-divider"></div>
   <div class="team-info">
     <div class="team-info-item">
-      <span class="team-info-icon">📧</span>
+      <span class="team-info-icon">Email:</span>
       <span>baominhbrthcs@gmail.com</span>
     </div>
     <div class="team-info-item">
-      <span class="team-info-icon">📱</span>
+      <span class="team-info-icon">Phone:</span>
       <span>078-222-4999</span>
     </div>
     <div class="team-info-item">
-      <span class="team-info-icon">🆔</span>
+      <span class="team-info-icon">ID:</span>
       <span>SE193028</span>
     </div>
   </div>
@@ -273,7 +251,6 @@ chapter: false
 <!-- Member 5 - Backend Engineer -->
 <div class="team-card backend-engineer">
   <div class="team-avatar-container">
-    <div class="team-avatar-glow"></div>
     <img src="/images/Team/SE181951.JPG" alt="Lê Vũ Phương Hoà" class="team-avatar">
   </div>
   <h3 class="team-name">Lê Vũ Phương Hoà</h3>
@@ -281,15 +258,15 @@ chapter: false
   <div class="team-divider"></div>
   <div class="team-info">
     <div class="team-info-item">
-      <span class="team-info-icon">📧</span>
+      <span class="team-info-icon">Email:</span>
       <span>hoalvpse181951@fpt.edu.vn</span>
     </div>
     <div class="team-info-item">
-      <span class="team-info-icon">📱</span>
+      <span class="team-info-icon">Phone:</span>
       <span>032-703-0024</span>
     </div>
     <div class="team-info-item">
-      <span class="team-info-icon">🆔</span>
+      <span class="team-info-icon">ID:</span>
       <span>SE181951</span>
     </div>
   </div>
@@ -298,7 +275,6 @@ chapter: false
 <!-- Member 6 - Backend Engineer -->
 <div class="team-card backend-engineer">
   <div class="team-avatar-container">
-    <div class="team-avatar-glow"></div>
     <img src="/images/Team/SE182968.JPG" alt="Nguyễn Công Minh" class="team-avatar">
   </div>
   <h3 class="team-name">Nguyễn Công Minh</h3>
@@ -306,15 +282,15 @@ chapter: false
   <div class="team-divider"></div>
   <div class="team-info">
     <div class="team-info-item">
-      <span class="team-info-icon">📧</span>
+      <span class="team-info-icon">Email:</span>
       <span>minhncse182968@fpt.edu.vn</span>
     </div>
     <div class="team-info-item">
-      <span class="team-info-icon">📱</span>
+      <span class="team-info-icon">Phone:</span>
       <span>036-240-1520</span>
     </div>
     <div class="team-info-item">
-      <span class="team-info-icon">🆔</span>
+      <span class="team-info-icon">ID:</span>
       <span>SE182968</span>
     </div>
   </div>
@@ -323,7 +299,6 @@ chapter: false
 <!-- Member 7 - Backend Engineer -->
 <div class="team-card backend-engineer">
   <div class="team-avatar-container">
-    <div class="team-avatar-glow"></div>
     <img src="/images/Team/SE180168.png" alt="Nguyễn Văn Duy Khiêm" class="team-avatar">
   </div>
   <h3 class="team-name">Nguyễn Văn Duy Khiêm</h3>
@@ -331,15 +306,15 @@ chapter: false
   <div class="team-divider"></div>
   <div class="team-info">
     <div class="team-info-item">
-      <span class="team-info-icon">📧</span>
+      <span class="team-info-icon">Email:</span>
       <span>khiemnguyen120216@gmail.com</span>
     </div>
     <div class="team-info-item">
-      <span class="team-info-icon">📱</span>
+      <span class="team-info-icon">Phone:</span>
       <span>083-6262-507</span>
     </div>
     <div class="team-info-item">
-      <span class="team-info-icon">🆔</span>
+      <span class="team-info-icon">ID:</span>
       <span>SE180168</span>
     </div>
   </div>
