@@ -34,6 +34,8 @@ The "manhattan-redshift-workgroup" has 4 base RPU and an endpoint for Query Edit
 
 They are separated to manage storage and compute independently.
 
+![Redshift Serverless Architecture](/images/manhattan-dataways/redshift-spectrum/redshift_serverless_architecture.png)
+
 # Capacity and RPU
 
 ## What is RPU?

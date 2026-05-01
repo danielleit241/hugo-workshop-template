@@ -48,6 +48,8 @@ REGION 'us-east-2';
 
 ![Create external schema](/images/manhattan-dataways/redshift-spectrum/16-create-external-schema.png)
 
+![External Schema Creation Flow](/images/manhattan-dataways/redshift-spectrum/external_schema_flow.png)
+
 Check tables:
 
 ```sql

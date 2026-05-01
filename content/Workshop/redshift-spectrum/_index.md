@@ -32,6 +32,8 @@ When you submit a query using Spectrum:
 
 This architecture enables analytics on massive datasets without the overhead of data loading.
 
+![Redshift Spectrum Workflow](/images/manhattan-dataways/redshift-spectrum/redshift_spectrum_workflow.png)
+
 ## Redshift Spectrum Benefits
 
 ### Performance & Scalability
@@ -72,6 +74,8 @@ The Manhattan DataWays project provides the perfect foundation for Redshift Spec
 | Scalability | Cluster size limit | Virtually unlimited |
 | Cost Model | Per hour | Per query |
 | Data Freshness | Batch loaded | Real-time |
+
+![Traditional Redshift vs Redshift Spectrum](/images/manhattan-dataways/redshift-spectrum/redshift_comparison.png)
 
 ## Workshop Overview
 

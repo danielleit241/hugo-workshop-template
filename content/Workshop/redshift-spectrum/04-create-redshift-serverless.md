@@ -60,6 +60,8 @@ Wait until workgroup status becomes "Available".
 
 ![Workgroup available](/images/manhattan-dataways/redshift-spectrum/05-redshift-workgroup-available.png)
 
+![Redshift Serverless Setup Flow](/images/manhattan-dataways/redshift-spectrum/redshift_setup_flow.png)
+
 ## Why This Configuration
 
 - 4 RPU capacity sufficient for test queries without high costs
