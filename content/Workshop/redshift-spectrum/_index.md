@@ -1,9 +1,7 @@
 ---
-title: "Redshift Spectrum"
+title: "Amazon Redshift Spectrum"
 weight: 1
 ---
-
-# Amazon Redshift Spectrum Workshop
 
 Welcome to the comprehensive Redshift Spectrum workshop in the Manhattan DataWays project. This guide demonstrates how to harness the power of Amazon Redshift Spectrum to run complex SQL queries directly against data stored in Amazon S3, integrated seamlessly with AWS Glue Data Catalog.
 

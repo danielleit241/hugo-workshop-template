@@ -1,9 +1,7 @@
 ---
-title: "Giới thiệu"
+title: "Amazon Redshift Spectrum"
 weight: 1
 ---
-
-# Workshop Amazon Redshift Spectrum
 
 Chào mừng bạn đến với workshop toàn diện về Redshift Spectrum trong dự án Manhattan DataWays. Bài hướng dẫn này trình bày cách tận dụng sức mạnh của Amazon Redshift Spectrum để chạy các truy vấn SQL phức tạp trực tiếp trên dữ liệu được lưu trữ trong Amazon S3, tích hợp liền mạch với AWS Glue Data Catalog.
 
