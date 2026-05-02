@@ -3,6 +3,7 @@ title: "Redshift"
 date: "2026-05-02"
 weight: 2
 chapter: false
+pre: " <b> 2. </b> "
 ---
 
 Chào mừng bạn đến với workshop toàn diện về Redshift Spectrum trong dự án Manhattan DataWays. Bài hướng dẫn này trình bày cách tận dụng sức mạnh của Amazon Redshift Spectrum để chạy các truy vấn SQL phức tạp trực tiếp trên dữ liệu được lưu trữ trong Amazon S3, tích hợp liền mạch với AWS Glue Data Catalog.
