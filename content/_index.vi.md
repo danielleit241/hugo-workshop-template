@@ -1,6 +1,6 @@
 ---
 title: "Workshop Template"
-date: "2025-09-09"
+date: "2026-05-02"
 weight: 1
 chapter: false
 ---

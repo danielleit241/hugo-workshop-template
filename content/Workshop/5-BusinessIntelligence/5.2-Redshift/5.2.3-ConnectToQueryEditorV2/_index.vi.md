@@ -1,6 +1,9 @@
 ---
 title: "Kết nối với Query Editor v2"
-weight: 6
+date: "2026-05-02"
+weight: 3
+chapter: false
+pre: " <b> 3. </b> "
 ---
 
 1. Từ Redshift console, click "Query data"

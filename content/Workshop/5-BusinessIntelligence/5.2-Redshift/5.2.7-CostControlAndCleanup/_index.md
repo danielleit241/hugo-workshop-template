@@ -1,6 +1,9 @@
 ---
 title: "Cost Control and Cleanup"
-weight: 10
+date: "2026-05-02"
+weight: 7
+chapter: false
+pre: " <b> 7. </b> "
 ---
 
 Redshift Serverless has $300 free trial credit for 90 days for accounts that haven't used Redshift Serverless before.

@@ -1,6 +1,9 @@
 ---
 title: "Core Concepts of Redshift Serverless"
+date: "2026-05-02"
 weight: 1
+chapter: false
+pre: " <b> 1. </b> "
 ---
 
 ## What is a Namespace?

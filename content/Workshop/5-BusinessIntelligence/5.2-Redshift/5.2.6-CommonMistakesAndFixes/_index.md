@@ -1,6 +1,9 @@
 ---
 title: "Common Mistakes and Fixes"
-weight: 9
+date: "2026-05-02"
+weight: 6
+chapter: false
+pre: " <b> 6. </b> "
 ---
 
 ![Wrong path vs correct Spectrum path](/images/manhattan-dataways/redshift-spectrum/spectrum_query_paths.png)

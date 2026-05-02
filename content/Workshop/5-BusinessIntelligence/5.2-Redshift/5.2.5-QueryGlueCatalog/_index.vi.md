@@ -1,11 +1,14 @@
 ---
-title: "Query Glue Catalog with Redshift Spectrum"
-weight: 8
+title: "Truy vấn Glue Catalog với Redshift Spectrum"
+date: "2026-05-02"
+weight: 5
+chapter: false
+pre: " <b> 5. </b> "
 ---
 
-After the external schema is created and duplicate errors are fixed, we can query the data.
+Sau khi external schema đã được tạo và sửa lỗi duplicate, chúng ta có thể query dữ liệu.
 
-## Sample Query
+## Query mẫu
 
 ```sql
 SELECT *
@@ -15,7 +18,7 @@ LIMIT 30;
 
 ![Query limit 30](/images/manhattan-dataways/redshift-spectrum/12-final-query-limit-30.png)
 
-## Query by Partition
+## Query theo partition
 
 ```sql
 SELECT vendorid, tpep_pickup_datetime, passenger_count, trip_distance, total_amount, trip_duration_min
@@ -24,7 +27,7 @@ WHERE year = '2025' AND month = '01'
 LIMIT 20;
 ```
 
-## Statistical Query
+## Query thống kê
 
 ```sql
 SELECT year, month, COUNT(*) AS total_trips
@@ -33,7 +36,7 @@ GROUP BY year, month
 ORDER BY year, month;
 ```
 
-## Analytics Query
+## Query analytics
 
 ```sql
 SELECT year, month, payment_type, COUNT(*) AS total_trips,
@@ -46,6 +49,6 @@ GROUP BY year, month, payment_type
 ORDER BY year, month, payment_type;
 ```
 
-![Query results](/images/manhattan-dataways/redshift-spectrum/13-query-results.png)
+![Kết quả query](/images/manhattan-dataways/redshift-spectrum/13-query-results.png)
 
-Redshift Spectrum allows direct queries of Parquet data from S3 through Glue metadata without loading data into Redshift native tables.
+Redshift Spectrum cho phép query trực tiếp dữ liệu Parquet từ S3 thông qua Glue metadata mà không cần load data vào Redshift native tables.

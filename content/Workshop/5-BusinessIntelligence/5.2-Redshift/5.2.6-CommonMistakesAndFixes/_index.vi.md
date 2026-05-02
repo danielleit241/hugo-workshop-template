@@ -1,6 +1,9 @@
 ---
 title: "Sai lầm phổ biến và cách khắc phục"
-weight: 9
+date: "2026-05-02"
+weight: 6
+chapter: false
+pre: " <b> 6. </b> "
 ---
 
 ![Đường dẫn sai và đúng với Spectrum](/images/manhattan-dataways/redshift-spectrum/spectrum_query_paths.png)
