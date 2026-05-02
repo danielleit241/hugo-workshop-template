@@ -3,6 +3,8 @@ title: "Common Mistakes and Fixes"
 weight: 9
 ---
 
+![Wrong path vs correct Spectrum path](/images/manhattan-dataways/redshift-spectrum/spectrum_query_paths.png)
+
 ## Mistake 1: Using "Load data" Instead of External Schema
 
 When first entering Query Editor v2, you might mistakenly click "Load data" to import data into Redshift native tables.

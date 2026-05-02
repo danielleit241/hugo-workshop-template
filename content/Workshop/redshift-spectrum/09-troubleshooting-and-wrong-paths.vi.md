@@ -3,6 +3,8 @@ title: "Sai lầm phổ biến và cách khắc phục"
 weight: 9
 ---
 
+![Đường dẫn sai và đúng với Spectrum](/images/manhattan-dataways/redshift-spectrum/spectrum_query_paths.png)
+
 ## Sai lầm 1: Sử dụng "Load data" thay vì External Schema
 
 Khi mới vào Query Editor v2, có thể nhầm click "Load data" để import data vào Redshift native table.
