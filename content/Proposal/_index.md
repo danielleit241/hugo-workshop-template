@@ -8,7 +8,7 @@ pre: " <b> 1. </b> "
 
 ## Content
 
-### **Project Summary**
+### Project Summary
 
 - Summary: This project aims to build an automated data processing system (Data Analytics Pipeline) on the Amazon Web Services (AWS) cloud platform. The system is designed with an event-driven and serverless architecture, specialized for processing, cleaning, and analyzing large-scale taxi trip record datasets (TLC Trip Record Data - Yellow Taxi). The ultimate goal is to transform raw data into high-value insights that support business decision-making through interactive dashboards.
 - Objectives:
@@ -23,7 +23,7 @@ pre: " <b> 1. </b> "
   - Build a BI reporting system on Amazon QuickSight.
   - Set up security, monitoring, and alerting systems using CloudWatch, CloudTrail, and SNS.
 
-### **Problem Statement**
+### Problem Statement
 
 Current Challenges: The Yellow Taxi dataset from the New York City Taxi and Limousine Commission contains a massive amount of information, but the raw data also includes a significant amount of noise and anomalies:
 
@@ -37,7 +37,7 @@ Technical Solution: Deploy a modern Data Lakehouse architecture on AWS:
 - Strict quality control: Use AWS Glue DataBrew for profiling and AWS Lambda for branching logic. For example, automatically send an alert if the data error rate is greater than 20%; otherwise continue the pipeline.
 - Standardization and optimization: Clean the data, create additional meaningful features such as `trip_duration` and `trip_speed`, and store it in columnar Parquet format with partitioning to optimize cost and query performance.
 
-### **Solution Architecture**
+### Solution Architecture
 
 ![overview](/images/Proposal/diagram-architecture.jpg)
 
@@ -70,7 +70,7 @@ Technology Stack:
 | Security & Monitoring     | IAM, CloudTrail, CloudWatch, SNS   | Handles access control, audit logs, monitoring, and alerts.       |
 
 
-### **Implementation Plan**
+### Implementation Plan
 
 Roadmap and Milestones (Estimated 4 weeks)
 
@@ -92,7 +92,7 @@ Roadmap and Milestones (Estimated 4 weeks)
   - Set up CloudWatch alarms and SNS notifications to alert via email or Slack when ETL fails.
   - Perform end-to-end UAT testing and hand over the system documentation.
 
-### **Cost Estimation Model**
+### Cost Estimation Model
 
 The system maximizes the use of serverless architecture, so costs follow a pay-as-you-go model. To optimze the cost,
 we will put region in `us-east-2` and **Redshift** will only used in 1 hour.
