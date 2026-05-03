@@ -15,6 +15,26 @@ home = [ "HTML", "RSS", "JSON"]
   showVisitedLinks = true
   disableBreadcrumb = false
   disableNextPrev = false
+  
+  [[params.authors]]
+    name = "Hoàng Kha"
+    url = "https://www.linkedin.com/in/hoang-kha"
+
+  [[params.authors]]
+    name = "Anh Tuấn"
+    url = "https://www.linkedin.com/in/anh-tuan"
+
+  [[params.authors]]
+    name = "Nhật Phương"
+    url = "https://www.linkedin.com/in/nhat-phuong"
+
+  [[params.authors]]
+    name = "Anh Đức"
+    url = "https://www.linkedin.com/in/anh-duc"
+
+  [[params.authors]]
+    name = "Hoàng Việt"
+    url = "https://www.linkedin.com/in/hoang-viet"
 
 [Languages]
 [Languages.en]
