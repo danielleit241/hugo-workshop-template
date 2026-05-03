@@ -17,25 +17,32 @@ home = [ "HTML", "RSS", "JSON"]
   disableNextPrev = false
   
   [[params.authors]]
-    name = "Hoàng Kha"
-    url = "https://www.linkedin.com/in/hoang-kha"
+    name = "Quốc Hào"
+    url = "https://www.linkedin.com/in/quochaotrieu"
 
   [[params.authors]]
-    name = "Anh Tuấn"
-    url = "https://www.linkedin.com/in/anh-tuan"
+    name = "Lam Giang"
+    url = "https://www.linkedin.com/in/lam-giang"
 
   [[params.authors]]
-    name = "Nhật Phương"
-    url = "https://www.linkedin.com/in/nhat-phuong"
+    name = "Bảo Minh"
+    url = "https://www.linkedin.com/in/minh-tr%E1%BA%A7n-327286218"
 
   [[params.authors]]
-    name = "Anh Đức"
-    url = "https://www.linkedin.com/in/anh-duc"
+    name = "Anh Duy"
+    url = "https://www.linkedin.com/in/dazielvad"
 
   [[params.authors]]
-    name = "Hoàng Việt"
-    url = "https://www.linkedin.com/in/hoang-viet"
+    name = "Công Minh"
+    url = "https://www.linkedin.com/in/nguy%E1%BB%85n-c%C3%B4ng-minh-796553352"
+  
+  [[params.authors]]
+    name = "Duy Khiêm"
+    url = "https://www.linkedin.com/in/the-khiem7"
 
+  [[params.authors]]
+    name = "Phương Hòa"
+    url = "https://www.linkedin.com/in/danielle241"
 [Languages]
 [Languages.en]
 title = "Workshop Documentation"

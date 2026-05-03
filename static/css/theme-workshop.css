@@ -100,6 +100,48 @@ a:hover {
   line-height: 150% !important;
 }
 
+#sidebar #footer section {
+  margin-bottom: 1.25rem;
+}
+
+#sidebar #footer section h5 {
+  color: #ffffff !important;
+  margin: 0 0 0.55rem;
+}
+
+#sidebar #authors ul,
+#sidebar #more-footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#sidebar #authors li,
+#sidebar #more-footer li {
+  margin: 0 0 0.9rem;
+  padding: 0;
+}
+
+#sidebar #more-footer a {
+  display: inline-block;
+  padding-left: 0 !important;
+}
+
+#sidebar #authors a {
+  color: #f6a623 !important;
+}
+
+#sidebar #authors a:hover,
+#sidebar #more-footer a:hover {
+  color: #ffffff !important;
+}
+
+#sidebar #team-footer .team-name {
+  color: #f6a623;
+  margin: 0;
+  font-style: normal;
+}
+
 #body a.highlight:after {
   display: block;
   content: "";
