@@ -155,7 +155,7 @@ chapter: false
 <!-- Member 1 - Leader -->
 <div class="team-card leader">
   <div class="team-avatar-container">
-    <img src="/images/Team/SE180011.JPG" alt="Triệu Quốc Hào" class="team-avatar">
+    <img src="/images/Team/SE180011.JPG?v=2" alt="Triệu Quốc Hào" class="team-avatar">
   </div>
   <h3 class="team-name">Triệu Quốc Hào</h3>
   <span class="team-role">👑 Leader - Data Scientist</span>
@@ -179,7 +179,7 @@ chapter: false
 <!-- Member 2 - Data Engineer -->
 <div class="team-card data-engineer">
   <div class="team-avatar-container">
-    <img src="/images/Team/SE194447.JPG" alt="Nguyễn Quách Lam Giang" class="team-avatar">
+    <img src="/images/Team/SE194447.JPG?v=2" alt="Nguyễn Quách Lam Giang" class="team-avatar">
   </div>
   <h3 class="team-name">Nguyễn Quách Lam Giang</h3>
   <span class="team-role">📊 Data Engineer</span>
@@ -203,7 +203,7 @@ chapter: false
 <!-- Member 3 - AI Engineer -->
 <div class="team-card ai-engineer">
   <div class="team-avatar-container">
-    <img src="/images/Team/SE181823.JPG" alt="Nguyễn Văn Anh Duy" class="team-avatar">
+    <img src="/images/Team/SE181823.JPG?v=2" alt="Nguyễn Văn Anh Duy" class="team-avatar">
   </div>
   <h3 class="team-name">Nguyễn Văn Anh Duy</h3>
   <span class="team-role">🤖 AI Engineer</span>
@@ -227,7 +227,7 @@ chapter: false
 <!-- Member 4 - AI Engineer -->
 <div class="team-card ai-engineer">
   <div class="team-avatar-container">
-    <img src="/images/Team/SE193028.JPG" alt="Trần Huỳnh Bảo Minh" class="team-avatar" style="object-position: center top;">
+    <img src="/images/Team/SE193028.JPG?v=2" alt="Trần Huỳnh Bảo Minh" class="team-avatar" style="object-position: center top;">
   </div>
   <h3 class="team-name">Trần Huỳnh Bảo Minh</h3>
   <span class="team-role">🤖 AI Engineer</span>
@@ -251,7 +251,7 @@ chapter: false
 <!-- Member 5 - Backend Engineer -->
 <div class="team-card backend-engineer">
   <div class="team-avatar-container">
-    <img src="/images/Team/SE181951.JPG" alt="Lê Vũ Phương Hoà" class="team-avatar">
+    <img src="/images/Team/SE181951.JPG?v=2" alt="Lê Vũ Phương Hoà" class="team-avatar">
   </div>
   <h3 class="team-name">Lê Vũ Phương Hoà</h3>
   <span class="team-role">⚙️ Backend Engineer</span>
@@ -275,7 +275,7 @@ chapter: false
 <!-- Member 6 - Backend Engineer -->
 <div class="team-card backend-engineer">
   <div class="team-avatar-container">
-    <img src="/images/Team/SE182968.JPG" alt="Nguyễn Công Minh" class="team-avatar">
+    <img src="/images/Team/SE182968.JPG?v=2" alt="Nguyễn Công Minh" class="team-avatar">
   </div>
   <h3 class="team-name">Nguyễn Công Minh</h3>
   <span class="team-role">⚙️ Backend Engineer</span>
@@ -299,7 +299,7 @@ chapter: false
 <!-- Member 7 - Backend Engineer -->
 <div class="team-card backend-engineer">
   <div class="team-avatar-container">
-    <img src="/images/Team/SE180168.png" alt="Nguyễn Văn Duy Khiêm" class="team-avatar">
+    <img src="/images/Team/SE180168.png?v=2" alt="Nguyễn Văn Duy Khiêm" class="team-avatar">
   </div>
   <h3 class="team-name">Nguyễn Văn Duy Khiêm</h3>
   <span class="team-role">⚙️ Backend Engineer</span>
