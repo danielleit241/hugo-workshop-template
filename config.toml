@@ -22,7 +22,7 @@ home = [ "HTML", "RSS", "JSON"]
 
   [[params.authors]]
     name = "Lam Giang"
-    url = "https://www.linkedin.com/in/lam-giang"
+    url = "https://www.linkedin.com/in/lucylamgiang"
 
   [[params.authors]]
     name = "Bảo Minh"
